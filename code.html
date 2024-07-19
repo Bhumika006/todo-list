@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: block;
+    background-image: url("https://media.istockphoto.com/id/1392898737/vector/abstract-horizontal-background-with-colorful-waves.jpg?s=612x612&w=0&k=20&c=xxRagBOWElqfzxPho893QoNmB1HnAw9VM-UHkQhtih4=");
+    background-size: cover;
+    
+}
+ 
+.logo{
+    background-color: black;
+    width: 2000px;
+    height: 120px;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    align-content:space-evenly;
+    position: sticky;
+}
+
+.logo p{
+    color: whitesmoke;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #db6d9f, 0 0 30px #d2b0c1, 0 0 30px #df8db6, 0 0 40px #cf96b3, 0 0 50px #d799b8;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #d2b0c1, 0 0 30px #d2b0c1, 0 0 40px #d2b0c1, 0 0 40px #d2b0c1 0 0 50px #d2b0c1, 0 0 40px #d2b0c1;
+  }
+}
+.logo a{
+    color: whitesmoke;
+}
+
+.logo ul{
+    margin-left: 710px;
+    margin-top: 82px;
+    text-decoration: underline;
+    text-decoration-color: whitesmoke;
+}
+ .addons{
+    background-color: black;
+    height: 45px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    border-radius: 15px;
+    filter: drop-shadow(20px 20px 40px white);
+ }
+.addups {
+    color: white;
+    display: flex;
+    margin-left: 1400px;
+    position: sticky;
+}
+
+.addups i{
+    color: white;
+    margin-right: 35px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.addups a:hover{
+    color: white;
+}
+.main{
+    width: 100%;
+    height: 90vh;
+    position:sticky;
+}
+
+.main{
+    background-image: url("images.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    display: block;
+    margin-top: 20px;
+    margin-left: 600px;
+    margin-bottom: 50px;
+    height: 500px;
+    position: sticky;
+    width: 400px;
+    filter: drop-shadow(20px 20px 40px black);
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.content .container{
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   width: 250px;
+   margin: auto;
+   height: 100%;  
+   position: sticky; 
+}
+
+.todo{
+    cursor: inherit;
+    display: flex;
+    padding: 14px;
+    justify-content: space-evenly;
+}
+
+.todo_value{
+    cursor: inherit;
+    background: transparent;
+    border: none;outline: none;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    flex-grow: 1;
+    border-bottom: 2px solid rgb(94, 41, 21);
+    justify-content: space-evenly;
+}
+
+.todo_chkbox{
+    cursor: inherit;
+}
+
+.todo:has(.todo_chkbox:checked){
+    color: palegreen;
+    background: black;
+    text-decoration: line-through 1.5px;
+    order: 1;
+}
+
+</style>
+<body>
+        <div class="logo">
+            <p><strong>To Do List</strong></p>
+        <ul>
+            <a href="#">
+                <li>Home</li>
+            </a>
+            <a href="main">
+                <li>Contacts</li>
+            </a>
+            <a href="main">
+                <li>Sign in</li>
+            </a>
+        </ul>
+        </div>
+   <div class="main">
+    <div class="content">
+        <div class="container">
+            <div class="todo">
+                <input class="todo_chkbox" type="checkbox">
+                <input class="todo_value" type="text" placeholder="add task">
+            </div>
+            <div class="todo">
+                <input class="todo_chkbox" type="checkbox">
+                <input class="todo_value" type="text" placeholder="add task">
+            </div> 
+            <div class="todo">
+                <input class="todo_chkbox" type="checkbox">
+                <input class="todo_value" type="text" placeholder="add task">
+            </div> 
+            <div class="todo">
+                <input class="todo_chkbox" type="checkbox">
+                <input class="todo_value" type="text" placeholder="add task">
+            </div>
+            <div class="todo">
+                <input class="todo_chkbox" type="checkbox">
+                <input class="todo_value" type="text" placeholder="add task">
+            </div> 
+            <div class="todo">
+                <input class="todo_chkbox" type="checkbox">
+                <input class="todo_value" type="text" placeholder="add task">
+            </div> 
+            <div class="todo">
+                <input class="todo_chkbox" type="checkbox">
+                <input class="todo_value" type="text" placeholder="add task">
+        </div>
+    </div>
+   </div>
+   <div class="addons">
+    <div class="addups">
+     <p>
+         <a href="#"><i class="fa-solid fa-plus"></i></a>
+     </p>
+     <p>
+         <a href="#"><i class="fa-solid fa-trash"></i></a>
+     </p>
+    </div>
+    </div>
+    <script>
+
+    const addTaskBtn = document.getElementById('fa-solid fa-plus');
+    const newTaskInput = document.getElementById('fa-solid fa-trash');
+    addTaskBtn.addEventListener('click', () => {
+        addTask(newTaskInput.value);
+        newTaskInput.value = '';
+    });
+
+    newTaskInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            addTask(newTaskInput.value);
+            newTaskInput.value = '';
+        }
+    });
+
+    function addTask(taskText) {
+        if (taskText.trim() === '') return;
+
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <span>${taskText}</span>
+            <div class="task-buttons">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        `;
+
+        const editBtn = li.querySelector('.edit-btn');
+        const deleteBtn = li.querySelector('.delete-btn');
+        const taskSpan = li.querySelector('span');
+
+        taskSpan.addEventListener('click', () => {
+            li.classList.toggle('completed');
+        });
+        editBtn.addEventListener('click', () => {
+            const newText = prompt('Edit task', taskSpan.textContent);
+            if (newText !== null && newText.trim() !== '') {
+                taskSpan.textContent = newText;
+            }
+        });
+
+        deleteBtn.addEventListener('click', () => {
+            taskList.removeChild(li);
+        });
+
+        taskList.appendChild(li);
+    }
+
+    </script>
+</body>
+</html>
